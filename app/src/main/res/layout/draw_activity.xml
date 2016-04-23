@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/image"/>
+
+    <com.example.kalli.camerahw.MyCanvas
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/myCanvas"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:orientation="horizontal"
+        android:weightSum="1.0"
+        android:id="@+id/colors"
+        android:layout_above="@+id/buttons"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            android:id="@+id/red"
+            android:background="#ffff4444"
+            android:layout_weight=".33"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            android:id="@+id/blue"
+            android:background="#ff33b5e5"
+            android:layout_toRightOf="@+id/red"
+            android:layout_weight=".33"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:id="@+id/green"
+            android:background="#ff99cc00"
+            android:layout_toRightOf="@+id/blue"
+            android:layout_weight=".33"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:orientation="horizontal"
+
+        android:weightSum="1.0"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:id="@+id/buttons">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Undo"
+            android:id="@+id/undo"
+            android:layout_weight=".33" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:id="@+id/clear"
+            android:layout_weight=".33"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:id="@+id/done"
+            android:layout_weight=".33"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
